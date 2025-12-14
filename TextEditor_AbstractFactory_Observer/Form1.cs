@@ -61,10 +61,8 @@ namespace TextEditor_AbstractFactory_Observer
                 ScrollBars = ScrollBars.Both
             };
 
-            sourceTextBox.TextChanged += (s, e) =>
-            {
-                editor.SetText(sourceTextBox.Text);
-            };
+            sourceTextBox.TextChanged += SourceTextBox_TextChanged;
+
 
 
             this.Controls.Add(fileNameTextBox);
@@ -91,5 +89,10 @@ namespace TextEditor_AbstractFactory_Observer
                 fileNameTextBox.Text = Path.GetFileName(path);
             }
         }
+        private void SourceTextBox_TextChanged(object sender, EventArgs e)
+        {
+            editor.SetText(sourceTextBox.Text);
+        }
+
     }
 }
