@@ -1,4 +1,6 @@
-﻿namespace TextEditor_AbstractFactory_Observer
+﻿using System;
+
+namespace TextEditor_AbstractFactory_Observer
 {
     partial class Form1
     {
@@ -41,8 +43,13 @@
             this.ResumeLayout(false);
 
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // ничего не нужно
+        }
 
         #endregion
     }
+
 }
 
