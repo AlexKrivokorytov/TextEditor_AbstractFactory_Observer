@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="HtmlFactory.cs" />
     <Compile Include="IFileFactory.cs" />
+    <Compile Include="Observer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TxtFactory.cs" />
