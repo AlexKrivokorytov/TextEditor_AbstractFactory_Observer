@@ -10,11 +10,16 @@ namespace TextEditor_AbstractFactory_Observer
         private TextBox fileNameTextBox;
         private OpenFileDialog openFileDialog;
         private MenuStrip menuStrip;
+        private TextEditor editor = new TextEditor();
+
 
         public Form1()
         {
             InitializeComponent();
             InitializeCustomUI();
+            editor.Attach(new WordDeleteObserver());
+            editor.Attach(new ParagraphObserver());
+
         }
 
         private void InitializeCustomUI()
@@ -55,6 +60,12 @@ namespace TextEditor_AbstractFactory_Observer
                 Multiline = true,
                 ScrollBars = ScrollBars.Both
             };
+
+            sourceTextBox.TextChanged += (s, e) =>
+            {
+                editor.SetText(sourceTextBox.Text);
+            };
+
 
             this.Controls.Add(fileNameTextBox);
             this.Controls.Add(sourceTextBox);

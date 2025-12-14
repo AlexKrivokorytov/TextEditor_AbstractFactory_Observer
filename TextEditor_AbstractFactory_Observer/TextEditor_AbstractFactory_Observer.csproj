@@ -61,9 +61,11 @@
     <Compile Include="HtmlFactory.cs" />
     <Compile Include="IFileFactory.cs" />
     <Compile Include="Observer.cs" />
+    <Compile Include="ParagraphObserver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TxtFactory.cs" />
+    <Compile Include="WordDeleteObserver.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
